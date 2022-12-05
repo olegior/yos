@@ -2,3 +2,46 @@ header{
     background: url('../../img/system/cover.png') no-repeat;
     background-size: cover;
 }
+
+.header-div{
+    padding: 24px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #FFFFFF;
+}
+
+.nav-logo{
+    font-family: 'Monoton',serif;
+    font-size: 3em;
+}
+
+
+.menu--list{
+    display: flex;
+    flex-direction: row;
+}
+
+.list--element{
+    margin-right: 30px;
+}
+.list--element:last-child{
+    margin-right: 0;
+}
+
+.list--element a{
+    font-size: 1.5em;
+    font-weight: 100;
+    color: #FFFFFF;
+    /* display: inline-block; */
+}
+
+.nav-search-cart{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.search-button{
+    padding-right: 30px;
+}

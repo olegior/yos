@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,92 +14,96 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
     <title>yos.</title>
 </head>
+
 <body>
     <div class="store" id="app" v-cloak>
-        <div class="wrapper">
-            <header class="header-div">
-                <div class="nav-logo">yos.</div>
-                     <div class="nav-menu">
-                         <nav>
-                             <ul>
-                                 <li><a href="#catalog">каталог</a></li>
-                                 <li><a href="#">sale</a></li>
-                                 <li><a href="#footer">контанкты</a></li>
-                             </ul>
-                         </nav>
-                     </div>
-                     <div class="nav-search-cart">
-                         <div class="search-button"><img  src="img/system/system-uicons_search.png" alt="search"></div>
-                         <div class="cart-button"><img  src="img/system/system-uicons_cart.png" alt="cart"></div>
-                     </div>
-         </header>
-         <div class="line">
-             <span>new ✧ new ✧ new ✧ new ✧ new ✧ new ✧ new ✧ new ✧ new ✧ new ✧ new ✧ new ✧</span> 
-         </div>
-         <main>
-         <section class="main-preview">
-             <div class="preview-goods">
-                 <button>ТЫК</button>
-                 <div class="preview-goods-items" v-for="(items,index) in goods">
-                     <img :src="setItemURL(index)" :alt="items.title">
-                     <p>{{items.price}} byn</p>
-                     <p>{{items.category}}</p>
-                     <p>«{{items.title}}»</p>
-                 </div>
-                 <button>ТЫК</button>
-             </div>
-         </section>
-         <section class="main-catalog" id="catalog">
-             
-             <div>
-                 <img src="img/system/image 23.jpg" alt="гардероб" class="catalog-img">
-             </div>
-             <div>
-                 <h2>Каталог</h2>
-                 <div class="main-catalog-categories">
-                 
-                     <div class="catalog-categories" v-for="(items,index) in category">{{items.title}}</div>
-             </div>
-             </div>
-         </section>
-         <section class="main-email">
-             <h2>Подписка</h2>
-             <p>Иногда мы будем присылать вам информацию о новинках и акциях, а также делиться важными новостями. Обещаем быть максимально полезными!</p>
-             <input type="email" name="" id="email" placeholder="yourmail@example.com">
-             <input type="button" value="подписаться" id="email-button">
-             <p>нажимая кнопку “подписаться”, вы соглашаетесь с политикой данных</p>
-         </section>
-         </main>
-         <footer id="footer">
-             <div class="footer">
-                 <div class="footer-offline-stores">
-                     <h2>Оффлайн магазин</h2>
-                     <p>Минск, ул. Гусовского, д. 2а, 2 этаж</p>
-                     <p>Будние: 10:00-20:00</p>
-                     <p>Выходные: 12:00-17:00</p>
-                 </div>
-                 <div class="footer-contact-information">
-                     <div class="footer-information">
-                         <h2>Информация</h2>
-                         <p>оплата и доставка</p>
-                         <p>возврат</p>
-                         <p>сроки пошива</p>
-                         <p>политика данных</p>
-                         <p>оферта</p>
-                         </div>
-                     <div class="footer-contacts">
-                         <h2>Контанкты</h2>
-                         <p>yos@gmail.com</p>
-                         <p>+375 29 122 03 03</p>
-                         <p>instagram</p>
-                         <p>telegram</p>
-                     </div>
-                 </div>
-             </div>
-         </footer>
-        </div>
+        <header>
+            <div class="wrapper header-div">
+                <div class="nav-logo"><a href="">yos.</a></div>
+                <nav class="nav-menu">
+                    <ul class="menu--list">
+                        <li class="list--element"><a href="#catalog">каталог</a></li>
+                        <li class="list--element"><a href="#">sale</a></li>
+                        <li class="list--element"><a href="#footer">контакты</a></li>
+                    </ul>
+                </nav>
+                <div class="nav-search-cart">
+                    <div class="search-button"><img src="img/system/system-uicons_search.png" alt="search"></div>
+                    <div class="cart-button"><img src="img/system/system-uicons_cart.png" alt="cart"></div>
+                </div>
+            </div>
+        </header>
+        <!-- <div class="line">
+            <span>new ✧ new ✧ new ✧ new ✧ new ✧ new ✧ new ✧ new ✧ new ✧ new ✧ new ✧ new ✧</span>
+        </div> -->
+        <main>
+            <section class="main-preview">
+                <div class="wrapper">
+                    <div class="preview-goods">
+                        <button>ТЫК</button>
+                        <div class="preview-goods-items" v-for="(items,index) in goods">
+                            <img :src="setItemURL(index)" :alt="items.title">
+                            <p>{{items.price}} byn</p>
+                            <p>{{items.category}}</p>
+                            <p>«{{items.title}}»</p>
+                        </div>
+                        <button>ТЫК</button>
+                    </div>
+                </div>
+            </section>
+            <section class="main-catalog" id="catalog">
+                <div class="wrapper">
+                    <div>
+                        <img src="img/system/image 23.jpg" alt="гардероб" class="catalog-img">
+                    </div>
+                    <div>
+                        <h2>Каталог</h2>
+                        <div class="main-catalog-categories">
+    
+                            <div class="catalog-categories" v-for="(items,index) in category">{{items.title}}</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="main-email">
+                <h2>Подписка</h2>
+                <p>Иногда мы будем присылать вам информацию о новинках и акциях, а также делиться важными новостями.
+                    Обещаем быть максимально полезными!</p>
+                <input type="email" name="" id="email" placeholder="yourmail@example.com">
+                <input type="button" value="подписаться" id="email-button">
+                <p>нажимая кнопку “подписаться”, вы соглашаетесь с политикой данных</p>
+            </section>
+        </main>
+        <footer id="footer">
+            <div class="footer">
+                <div class="footer-offline-stores">
+                    <h2>Оффлайн магазин</h2>
+                    <p>Минск, ул. Гусовского, д. 2а, 2 этаж</p>
+                    <p>Будние: 10:00-20:00</p>
+                    <p>Выходные: 12:00-17:00</p>
+                </div>
+                <div class="footer-contact-information">
+                    <div class="footer-information">
+                        <h2>Информация</h2>
+                        <p>оплата и доставка</p>
+                        <p>возврат</p>
+                        <p>сроки пошива</p>
+                        <p>политика данных</p>
+                        <p>оферта</p>
+                    </div>
+                    <div class="footer-contacts">
+                        <h2>Контанкты</h2>
+                        <p>yos@gmail.com</p>
+                        <p>+375 29 122 03 03</p>
+                        <p>instagram</p>
+                        <p>telegram</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </div>
     <script src="https://unpkg.com/vue@next"></script>
     <script src="script/script.js"></script>
 </body>
+
 </html>
