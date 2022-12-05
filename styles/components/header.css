@@ -3,6 +3,10 @@ header{
     background-size:cover;
 }
 
+header a{
+    color: #FFFFFF;
+}
+
 .header-div{
     padding: 24px 0;
     display: flex;

@@ -96,7 +96,7 @@ main{
     height: 100%;
 }
 
-.categories--link:active,.categories--link:visited, .categories--link:link{
+.categories--link:active, .categories--link:visited, .categories--link:link{
     color: #000000;
 }
 
