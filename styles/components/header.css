@@ -4,7 +4,7 @@ header{
 }
 
 .header-div{
-    padding: 24px 50px;
+    padding: 24px 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -12,7 +12,7 @@ header{
 }
 
 .nav-logo{
-    font-family: 'Monoton',serif;
+    font-family: 'Monoton';
     font-size: 3em;
 }
 
