@@ -1,0 +1,32 @@
+footer{
+    background-color: #E4EFFF;
+    max-height: 400px;
+    font-family: 'Raleway';
+}
+
+footer h2{
+    margin-bottom: 50px;
+}
+footer a:visited, a:link, a:active{
+    color: black;
+}
+
+footer .wrapper{
+    display: flex;
+    justify-content: space-around;
+    padding: 24px 0;
+}
+
+.footer-contact-information{
+    display: flex;
+}
+
+.footer-information{
+   margin-right: 100px; 
+}
+
+footer li{
+    font-size: 1.5em;
+    font-weight: 300;
+    margin-top: 20px;
+}

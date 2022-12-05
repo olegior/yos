@@ -1,23 +1,166 @@
+/* секция превью */
+
 .main-preview{
-    padding-top: 25vh;
-    max-height: 100vh;
+    /* padding-top: 25vh; */
+    /* max-height: 100vh; */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+main{
+    font-family: 'Montserrat', sans-serif;
+}
 
 .preview-goods-items{
-    width: 350px;
-    height: 550px;
-    margin: 0 50px;
+    max-width: 350px;
+    max-height: 550px;
+    /* margin: 0 50px; */
+    margin-right: 50px;
+}
+
+.preview-goods-items:last-child{
+    margin-right: 0;
 }
 
 .preview-goods-items img{
     max-width: 350px;
     max-height: 450px;
+    width: 100%;
 }
 
 .preview-goods{
     display: flex;
     flex-direction:row;
+    justify-content: space-evenly;
+}
+
+/* каталог */
+
+.main-catalog{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;   
+}
+
+.main-catalog-categories{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 80px);
+    gap: 20px;
+}
+.catalog-img{
+    max-height: 900px;
+    /* max-width: 100%; */
+    width: 100%;
+    /* object-fit:contain; */
+    /* height: 70vh; */
+}
+
+.catalog--image, .catalog--categories{
+    width: 49%;
+}
+
+.catalog--categories h2{
+    margin-bottom: 24px;
+} 
+
+.catalog--categories{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.catalog-categories{
+    
+    /* margin: 30px 24px 0; */
+    border: solid 1px #000000;
+}
+
+/* .catalog-categories:last-child{
+   
+    margin-bottom: 30px;
+} */
+
+.catalog-categories:hover{
+    cursor: pointer;
+}
+
+.categories--link{
+    display: flex;
     justify-content: center;
-    font-family: 'Montserrat';
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.categories--link:active,.categories--link:visited, .categories--link:link{
+    color: #000000;
+}
+
+.foo{
+    margin-top: 24px;
+    height: 500px;
+}
+
+
+/* контакт */
+
+.main-email{
+    min-height: 55vh;
+    font-family: 'Raleway';
+    width: 80%;
+    margin: 0 auto;
+}
+.main-email p, .main-email input{
+    font-size: 2em;
+    /* padding-top: 24px; */
+}
+
+.main-email p, .email-form{
+    margin-top: 24px;
+}
+
+#email{
+    width: calc( 100% - 500px );
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+#email::placeholder{
+    padding-left: 40px;
+}
+
+input{
+    height: 64px;
+    font-family: "Raleway";
+}
+#email-button{
+    width: 350px;
+    margin-left: 100px;
+    font-weight: 100;
+    font-size: 1.5em;
+}
+
+.main-email h2{
+    padding-top: 100px;
+}
+
+
+
+/* media */
+
+@media screen and (orientation:portrait){
+    .main-preview{
+        padding-top: 0;
+    }
+    .preview-goods-items img{
+        max-width: 200px;
+    }
+
+    .preview-goods{
+        flex-direction: column;
+    }
 }

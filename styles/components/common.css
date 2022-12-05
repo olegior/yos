@@ -1,11 +1,12 @@
 header,section {
     min-height: 100vh;
 }
+
 body{
     width: 100%;
     font-size: 16px;
+    font-family: "Montserrat",serif;
 }
-
 
 .wrapper{
     max-width: 90%;
@@ -15,4 +16,10 @@ body{
 a:link, a:visited, a:active{
     text-decoration: none;
     color: #FFFFFF;
+}
+
+h2{
+    font-family: "Raleway", serif;
+    font-weight: 600;
+    font-size: 2em;
 }

@@ -1,62 +1,11 @@
 @import url(components/common.css);
 @import url(components/header.css);
 @import url(components/main.css);
+@import url(components/footer.css);
 
-footer{
-    background-color: #E4EFFF;
-    height: 40vh;
-    font-family: 'Raleway';
-}
 
-.footer div{
-    margin-top: 50px;
-}
 
-.footer, .footer-contact-information{
-    display: flex;
-    flex-direction: row; 
-}
 
-.footer{
-    justify-content: space-evenly;
-   /* padding-top: 5em; */
-}
-.footer-information{
-   margin-right: 100px; 
-}
-
-.main-email{
-    min-height: 55vh;
-    font-family: 'Raleway';
-    width: 80%;
-    margin: 0 auto;
-}
-.main-email p, .main-email input{
-    font-size: 2em;
-    margin-top: 24px;
-}
-
-#email{
-    width: calc( 100% - 500px );
-}
-
-#email::placeholder{
-    padding-left: 10px;
-}
-
-input{
-    height: 64px;
-}
-#email-button{
-    width: 350px;
-    margin-left: 100px;
-    font-weight: 100;
-    font-size: 1.5em;
-}
-
-.main-email h2{
-    margin-top: 100px;
-}
 
 .line{
     height: 100px;
@@ -84,43 +33,5 @@ input{
     0%{transform: translate(0, 0);}
     100%{transform: translate(-100%, 0)}
 }
-.main-catalog{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    font-family: 'Montserrat';
-}
 
-.catalog-img{
-    max-height: 900px;
-}
 
-.catalog-categories{
-    text-align: center;
-    padding-top: 24px;
-    margin: 30px 24px 0;
-    border: solid 1px #000000;
-}
-.main-catalog-categories{
-    display: grid;
-    grid-template-columns: repeat(3, 300px);
-    grid-template-rows: repeat(3, 100px);
-
-}
-
-nav{
-    font-family: 'Montserrat';
-    font-weight: lighter ;
-}
-
-footer p{
-    font-size: 1.5em;
-    font-weight: 300;
-    margin-top: 20px;
-}
-
-h2{
-    font-size: 2em;
-    font-weight: bold;
-}
