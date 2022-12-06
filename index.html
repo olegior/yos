@@ -9,9 +9,10 @@
     <link rel="stylesheet" href="styles/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet"> --> 
+    <!-- оптимизация  -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700;900&display=swap" rel="stylesheet">
     <title>yos.</title>
 </head>
 
@@ -19,7 +20,10 @@
     <div class="store" id="app" v-cloak>
         <header>
             <div class="wrapper header-div">
-                <div class="nav-logo"><a href="">yos.</a></div>
+                <div class="nav-logo"><a href="">
+                    <!-- yos. -->
+                    <img src="img/system/logo.png" alt="yos.">
+                </a></div>
                 <nav class="nav-menu">
                     <ul class="menu--list">
                         <li class="list--element"><a href="#catalog">каталог</a></li>
@@ -60,7 +64,9 @@
                         <div class="catalog-categories" v-for="(items,index) in category"><a href="#"
                                 class="categories--link">{{items.title}}</a></div>
                     </div>
-                    <div class="foo">будущий контент</div>
+                    <div class="foo"> 
+                        <a class="main-link" href="#">смотреть всё</a>
+                    </div>
                 </div>
             </section>
             <!-- рассылка -->
@@ -72,7 +78,7 @@
                     <input type="email" name="" id="email" placeholder="yourmail@example.com">
                     <input type="button" value="подписаться" id="email-button">
                 </div>
-                <p>нажимая кнопку “подписаться”, вы соглашаетесь с политикой данных</p>
+                <p>нажимая кнопку “подписаться”, вы соглашаетесь с <a class="main-link" href="#">политикой данных</a></p>
             </section>
         </main>
         <footer id="footer">

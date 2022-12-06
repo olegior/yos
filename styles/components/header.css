@@ -53,4 +53,8 @@ header a{
     .header-div{
         flex-direction: column;
     }
+    header{
+        
+        background-position: center;
+    }
 }

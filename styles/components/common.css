@@ -1,15 +1,22 @@
+:root{
+    --section-height: 100vh;
+    --root-text-size: 16px;
+    --section-width: 90%;
+}
+
+
 header,section {
-    min-height: 100vh;
+    min-height: var(--section-height);
 }
 
 body{
     width: 100%;
-    font-size: 16px;
-    font-family: "Montserrat",serif;
+    font-size: var(--root-text-size);
+    font-family: "Montserrat",sans-serif;
 }
 
 .wrapper{
-    max-width: 90%;
+    max-width: var(--section-width);
     margin: 0 auto;
 }
 
@@ -18,7 +25,7 @@ a:link, a:visited, a:active{
 }
 
 h2{
-    font-family: "Raleway", serif;
-    font-weight: 600;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
     font-size: 2em;
 }

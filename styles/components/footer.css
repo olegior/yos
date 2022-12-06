@@ -1,13 +1,13 @@
 footer{
     background-color: #E4EFFF;
-    max-height: 400px;
+    min-height: 400px;
     font-family: 'Raleway';
 }
 
 footer h2{
     margin-bottom: 50px;
 }
-footer a:visited, a:link, a:active{
+footer a:visited, footer  a:link, footer  a:active{
     color: black;
 }
 
@@ -26,7 +26,31 @@ footer .wrapper{
 }
 
 footer li{
-    font-size: 1.5em;
+    font-size: 2em;
     font-weight: 300;
     margin-top: 20px;
+}
+
+
+@media screen and (orientation:portrait) {
+    footer .wrapper, .footer-contact-information{
+        flex-direction: column;
+        padding: 0;
+        /* justify-content: center; */
+        /* align-items: center; */
+    }
+    #footer{
+        font-size: 1em;
+    }
+    .footer-contact-information div{
+        margin: 0;
+        /* margin-bottom: var(--mp-top); */
+    }
+    footer h2{
+        margin: var(--mp-top) 0;
+    }
+    footer li{
+        font-size: 1em;
+        margin-top: 10px;
+    }
 }
