@@ -1,6 +1,6 @@
 footer{
     background-color: #E4EFFF;
-    min-height: 400px;
+    /* min-height: 400px; */
     font-family: 'Raleway';
 }
 
@@ -14,7 +14,8 @@ footer a:visited, footer  a:link, footer  a:active{
 footer .wrapper{
     display: flex;
     justify-content: space-around;
-    padding: 24px 0;
+    /* padding: 24px 0; */
+    padding: 64px 0;
 }
 
 .footer-contact-information{
@@ -27,7 +28,7 @@ footer .wrapper{
 
 footer li{
     font-size: 2em;
-    font-weight: 300;
+    /* font-weight: 300; */
     margin-top: 20px;
 }
 
