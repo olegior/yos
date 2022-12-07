@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Document</title>
+</head>
+<body id="app" v-cloak>
+    <header class="goods-header">
+        <div class="wrapper header-div goods-header">
+            <div class="nav-logo"><a href="">
+                <!-- yos. -->
+                <img src="img/system/logo-black.png" alt="yos.">
+            </a></div>
+            <nav class="nav-menu">
+                <ul class="menu--list">
+                    <li class="list--element"><a href="#catalog">каталог</a></li>
+                    <li class="list--element"><a href="#">sale</a></li>
+                    <li class="list--element"><a href="#footer">контакты</a></li>
+                </ul>
+            </nav>
+            <div class="nav-search-cart">
+                <div class="search-button"><img src="img/system/system-uicons_search_black.png" alt="search"></div>
+                <div class="cart-button"><img src="img/system/system-uicons_cart_black.png" alt="cart"></div>
+            </div>
+        </div>
+    </header>
+    <section class="goods-catalog wrapper">
+        <h2>Все товары</h2>
+        <div class="goods-filters">
+            <div class="filter-div">Фильтр+</div>
+            <div class="goods-categories">
+                <div>все</div>
+                <div v-for="(items,index) in category"><a href="#"class="categories--link">{{items.title}}</a></div>
+            </div>
+            <div class="sort-div">Сортировка</div>
+        </div>
+        <div class="goods-preview"></div>
+    </section>
+    <footer id="footer">
+        <div class="wrapper">
+            <div class="footer-offline-stores">
+                <h2>Оффлайн магазин</h2>
+                <ul>
+                    <li>Минск, ул. Гусовского, д. 2а, 2 этаж</li>
+                    <li>Будние: 10:00-20:00</li>
+                    <li>Выходные: 12:00-17:00</li>
+                </ul>
+            </div>
+            <div class="footer-contact-information">
+                <div class="footer-information">
+                    <h2>Информация</h2>
+                    <ul>
+                        <li><a href="#">оплата и доставка</a></li>
+                        <li><a href="#">возврат</a></li>
+                        <li><a href="#">сроки пошива</a></li>
+                        <li><a href="#">политика данных</a></li>
+                        <li><a href="#">оферта</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contacts">
+                    <h2>Контанкты</h2>
+                    <ul>
+                        <li><a href="#">yos@gmail.com</a></li>
+                        <li><a href="#">+375 29 122 03 03</a></li>
+                        <li><a href="#">instagram</a></li>
+                        <li><a href="#">instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="script/script.js"></script>
+</body>
+</html>

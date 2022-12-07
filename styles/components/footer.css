@@ -4,18 +4,16 @@ footer{
     font-family: 'Raleway';
 }
 
-footer h2{
+/* footer h2{
     margin-bottom: 50px;
-}
-footer a:visited, footer  a:link, footer  a:active{
-    color: black;
-}
+} */
+
 
 footer .wrapper{
     display: flex;
     justify-content: space-around;
     /* padding: 24px 0; */
-    padding: 64px 0;
+    /* padding: 64px 0; */
 }
 
 .footer-contact-information{
@@ -43,12 +41,21 @@ footer li{
     #footer{
         font-size: 1em;
     }
+    .footer-offline-stores{
+        margin-top: var(--mp-top);
+    }
+    .footer-contact-information{
+        margin-bottom: var(--mp-top);
+    }
     .footer-contact-information div{
         margin: 0;
+        /* margin-bottom: v; */
         /* margin-bottom: var(--mp-top); */
+
     }
     footer h2{
-        margin: var(--mp-top) 0;
+        margin-top: var(--mp-top);
+        margin-bottom: var(--mp-top);
     }
     footer li{
         font-size: 1em;

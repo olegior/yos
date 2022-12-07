@@ -16,105 +16,103 @@
     <title>yos.</title> -->
 </head>
 
-<body>
-    <div class="store" id="app" v-cloak>
-        <header>
-            <div class="wrapper header-div">
-                <div class="nav-logo"><a href="">
-                    <!-- yos. -->
-                    <img src="img/system/logo.png" alt="yos.">
-                </a></div>
-                <nav class="nav-menu">
-                    <ul class="menu--list">
-                        <li class="list--element"><a href="#catalog">каталог</a></li>
-                        <li class="list--element"><a href="#">sale</a></li>
-                        <li class="list--element"><a href="#footer">контакты</a></li>
-                    </ul>
-                </nav>
-                <div class="nav-search-cart">
-                    <div class="search-button"><img src="img/system/system-uicons_search.png" alt="search"></div>
-                    <div class="cart-button"><img src="img/system/system-uicons_cart.png" alt="cart"></div>
+<body id="app" v-cloak>
+        <header class="index-header">
+        <div class="wrapper header-div">
+            <div class="nav-logo"><a href="">
+                <!-- yos. -->
+                <img src="img/system/logo.png" alt="yos.">
+            </a></div>
+            <nav class="nav-menu">
+                <ul class="menu--list">
+                    <li class="list--element"><a href="#catalog">каталог</a></li>
+                    <li class="list--element"><a href="#">sale</a></li>
+                    <li class="list--element"><a href="#footer">контакты</a></li>
+                </ul>
+            </nav>
+            <div class="nav-search-cart">
+                <div class="search-button"><img src="img/system/system-uicons_search.png" alt="search"></div>
+                <div class="cart-button"><img src="img/system/system-uicons_cart.png" alt="cart"></div>
+            </div>
+        </div>
+    </header>
+    <!-- <div class="line">
+        <span>new ✧ new ✧ new ✧ new ✧ new ✧ new ✧ new ✧ new ✧ new ✧ new ✧ new ✧ new ✧</span>
+    </div> -->
+    <main>
+        <section class="main-preview wrapper">
+            <div class="preview-goods">
+                <!-- <button>ТЫК</button> -->
+                <div class="preview-goods-items" v-for="(items,index) in goods">
+                    <img :src="setItemURL(index)" :alt="items.title">
+                    <p>{{items.price}} byn</p>
+                    <p>{{items.category}}</p>
+                    <p>«{{items.title}}»</p>
+                </div>
+                <!-- <button>ТЫК</button> -->
+            </div>
+        </section>
+        <!-- каталог -->
+        <section class="main-catalog wrapper" id="catalog">
+            <div class="catalog--image">
+                <img src="img/system/image 23.jpg" alt="гардероб" class="catalog-img">
+            </div>
+            <div class="catalog--categories">
+                <h2>Каталог</h2>
+                <div class="main-catalog-categories">
+                    <div class="catalog-categories" v-for="(items,index) in category"><a href="#"
+                            class="categories--link">{{items.title}}</a></div>
+                </div>
+                <div class="foo"> 
+                    <a class="main-link" href="goods.html">смотреть всё</a>
                 </div>
             </div>
-        </header>
-        <!-- <div class="line">
-            <span>new ✧ new ✧ new ✧ new ✧ new ✧ new ✧ new ✧ new ✧ new ✧ new ✧ new ✧ new ✧</span>
-        </div> -->
-        <main>
-            <section class="main-preview wrapper">
-                <div class="preview-goods">
-                    <!-- <button>ТЫК</button> -->
-                    <div class="preview-goods-items" v-for="(items,index) in goods">
-                        <img :src="setItemURL(index)" :alt="items.title">
-                        <p>{{items.price}} byn</p>
-                        <p>{{items.category}}</p>
-                        <p>«{{items.title}}»</p>
-                    </div>
-                    <!-- <button>ТЫК</button> -->
-                </div>
-            </section>
-            <!-- каталог -->
-            <section class="main-catalog wrapper" id="catalog">
-                <div class="catalog--image">
-                    <img src="img/system/image 23.jpg" alt="гардероб" class="catalog-img">
-                </div>
-                <div class="catalog--categories">
-                    <h2>Каталог</h2>
-                    <div class="main-catalog-categories">
-                        <div class="catalog-categories" v-for="(items,index) in category"><a href="#"
-                                class="categories--link">{{items.title}}</a></div>
-                    </div>
-                    <div class="foo"> 
-                        <a class="main-link" href="#">смотреть всё</a>
-                    </div>
-                </div>
-            </section>
-            <!-- рассылка -->
-            <section class="main-email wrapper">
-                <h2>Подписка</h2>
-                <p>Иногда мы будем присылать вам информацию о новинках и акциях, а также делиться важными новостями.
-                    Обещаем быть максимально полезными!</p>
-                <div class="email-form">
-                    <input type="email" name="" id="email" placeholder="yourmail@example.com">
-                    <input type="button" value="подписаться" id="email-button">
-                </div>
-                <p>нажимая кнопку “подписаться”, вы соглашаетесь с <a class="main-link" href="#">политикой данных</a></p>
-            </section>
-        </main>
-        <footer id="footer">
-            <div class="wrapper">
-                <div class="footer-offline-stores">
-                    <h2>Оффлайн магазин</h2>
+        </section>
+        <!-- рассылка -->
+        <section class="main-email wrapper">
+            <h2>Подписка</h2>
+            <p>Иногда мы будем присылать вам информацию о новинках и акциях, а также делиться важными новостями.
+                Обещаем быть максимально полезными!</p>
+            <div class="email-form">
+                <input type="email" name="" id="email" placeholder="yourmail@example.com">
+                <input type="button" value="подписаться" id="email-button">
+            </div>
+            <p>нажимая кнопку “подписаться”, вы соглашаетесь с <a class="main-link" href="#">политикой данных</a></p>
+        </section>
+    </main>
+    <footer id="footer">
+        <div class="wrapper">
+            <div class="footer-offline-stores">
+                <h2>Оффлайн магазин</h2>
+                <ul>
+                    <li>Минск, ул. Гусовского, д. 2а, 2 этаж</li>
+                    <li>Будние: 10:00-20:00</li>
+                    <li>Выходные: 12:00-17:00</li>
+                </ul>
+            </div>
+            <div class="footer-contact-information">
+                <div class="footer-information">
+                    <h2>Информация</h2>
                     <ul>
-                        <li>Минск, ул. Гусовского, д. 2а, 2 этаж</li>
-                        <li>Будние: 10:00-20:00</li>
-                        <li>Выходные: 12:00-17:00</li>
+                        <li><a href="#">оплата и доставка</a></li>
+                        <li><a href="#">возврат</a></li>
+                        <li><a href="#">сроки пошива</a></li>
+                        <li><a href="#">политика данных</a></li>
+                        <li><a href="#">оферта</a></li>
                     </ul>
                 </div>
-                <div class="footer-contact-information">
-                    <div class="footer-information">
-                        <h2>Информация</h2>
-                        <ul>
-                            <li><a href="#">оплата и доставка</a></li>
-                            <li><a href="#">возврат</a></li>
-                            <li><a href="#">сроки пошива</a></li>
-                            <li><a href="#">политика данных</a></li>
-                            <li><a href="#">оферта</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-contacts">
-                        <h2>Контанкты</h2>
-                        <ul>
-                            <li><a href="#">yos@gmail.com</a></li>
-                            <li><a href="#">+375 29 122 03 03</a></li>
-                            <li><a href="#">instagram</a></li>
-                            <li><a href="#">instagram</a></li>
-                        </ul>
-                    </div>
+                <div class="footer-contacts">
+                    <h2>Контанкты</h2>
+                    <ul>
+                        <li><a href="#">yos@gmail.com</a></li>
+                        <li><a href="#">+375 29 122 03 03</a></li>
+                        <li><a href="#">instagram</a></li>
+                        <li><a href="#">instagram</a></li>
+                    </ul>
                 </div>
             </div>
-        </footer>
-    </div>
+        </div>
+    </footer>
     <script src="https://unpkg.com/vue@next"></script>
     <script src="script/script.js"></script>
 </body>

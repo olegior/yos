@@ -1,0 +1,37 @@
+.goods-header .list--element a{
+    color: black;
+    /* display: inline-block; */
+}
+
+.goods-header .list--element:nth-child(2) a{
+    color: red;
+    /* display: inline-block; */
+}
+
+.goods-header{
+    min-height: auto;
+}
+
+.goods-catalog{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.goods-filters, .goods-categories{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.goods-filters{
+    width: 100%;
+}
+
+.goods-categories div{
+    margin-right: 20px;
+}
+.goods-categories div:last-child{
+    margin-right: 0;
+}

@@ -74,9 +74,9 @@
     width: 49%;
 }
 
-.catalog--categories h2{
+/* .catalog--categories h2{
     margin-bottom: var(--mp-top);
-} 
+}  */
 
 .catalog--categories{
     display: flex;
@@ -126,11 +126,15 @@
 /* контакт */
 
 .main-email{
-    min-height: 55vh;
+    /* max-height: 60vh; */
+    min-height: auto;
     font-family: 'Raleway';
     width: 80%;
     margin: 0 auto;
-    padding-bottom: 100px;
+    
+    padding-bottom: 20vh;
+    padding-top: 20vh;
+    /* padding-bottom: 100px; */
 }
 .main-email p, .main-email input{
     font-size: 2em;
@@ -139,6 +143,7 @@
 
 .main-email p, .email-form{
     margin-top: var(--mp-top);
+    margin-bottom: var(--mp-top);
 }
 
 #email{
@@ -162,28 +167,31 @@ input{
     font-size: 1.5em;
 }
 
-.main-email h2{
-    padding-top: 100px;
-}
+/* .main-email h2{
+    padding-bottom: 2em;
+} */
 
-.main-link:link, .main-link:active, .main-link:visited{
+/* .main-link:link, .main-link:active, .main-link:visited{
     color: #000000;
-    /* text-decoration: underline; */
+    text-decoration: underline;
+    border-bottom: 1px solid #000000;
+} */
+
+.main-link{
     border-bottom: 1px solid #000000;
 }
-
-
 
 /* media */
 
 @media screen and (orientation:portrait){
     
     .main-preview{
-        padding-top: 0;
+        padding-top: 4em;
     }
     .preview-goods-items{
         max-width: 200px;
         margin: 0;
+        margin-bottom: var(--mp-top);
     }
     .preview-goods{
         flex-direction: column;
@@ -194,6 +202,7 @@ input{
     }
     .main-catalog{
         flex-direction: column;
+        padding-top: var(--mp-top);
     }
     div[class^='catalog--']{
         width: 100%;
@@ -206,11 +215,13 @@ input{
     }
     .catalog-categories{
         justify-content: center;
+        max-width: 100%;
         height: calc(var(--min-categories-height)/4*2.5);
     }
     .foo{
         height: auto;
         margin-bottom: var(--mp-top);
+        text-align: right;
     }
 
     .main-email h2{
@@ -241,7 +252,12 @@ input{
     }
 
     .main-email{
-        padding-bottom: var(--mp-top);
+        padding-bottom: 4em;
+        padding-top: 2em;
         width: 100%;
+    }
+
+    .main-email p{
+        text-align: justify;
     }
 }
