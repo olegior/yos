@@ -28,10 +28,55 @@
             </div>
         </div>
     </header>
+    <div class="filter-filter">
+        <div class="filter-content">
+            
+            <h2>Фильтр</h2>
+            <div class="filter--controls">
+                <span class="underline">Сбросить</span>
+                <span>Закрыть</span>
+            </div>
+            <div class="filter--price underline">цена
+                <input type="range" min="0" max="100" step="1" value="50" class="price-range" id="price-range" list="price-value">
+                <datalist class="range__list" id="price-value">
+                    <option class="range__opt" value="0" label="0"></option> 
+                    <option class="range__opt" value="100" label="100"></option> 
+                  </datalist>
+            </div>
+            <div class="filter--size underline">
+                размер
+                <ul class="size-list">
+                    <li>S</li>
+                    <li class="underline">M</li>
+                    <li>L</li>
+                    <li>XL</li>
+                    <li>Oversize</li>
+                </ul>
+                помощь
+            </div>
+            <div class="filter--color">цвет
+                <ul class="colors-list">
+                    <li></li>
+                    <li></li>
+                    <li class="active-color"></li>
+                    <li></li>
+                    <li class="active-color"></li>
+                    <li class="active-color"></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+            <button id="apply-filter">применить</button>
+        </div>
+    </div>
     <section class="goods-catalog wrapper">
         <h2>Все товары</h2>
         <div class="goods-filters">
-            <div class="filter-div">Фильтр+</div>
+            <div class="filter-div">
+                <input type="checkbox" name="filter-check" id="filter-check">
+                <label for="filter-check" class="checkbox-lable">Фильтр+</label>
+                <!-- Фильтр+ -->
+            </div>
             <div class="goods-categories">
                 <div>все</div>
                 <div v-for="(items,index) in category"><a href="#"class="categories--link">{{items.title}}</a></div>

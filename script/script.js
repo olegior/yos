@@ -411,3 +411,22 @@ const store ={
 }
 
 Vue.createApp(store).mount('#app')
+
+let filterContent = document.querySelector('.filter-content')
+let filterFilter = document.querySelector('.filter-filter')
+let checkBox = document.querySelector('#filter-check')
+let body = document.querySelector('#app')
+let button = document.querySelector('#apply-filter')
+
+checkBox.addEventListener('change', function (){
+    if (this.checked){
+        filterFilter.style.display = "block"
+        body.classList.add('scroll')
+    }
+})
+
+button.addEventListener('click',function (){
+    filterFilter.style.display = "none"
+    body.classList.remove('scroll')
+    checkBox.checked = false
+})
