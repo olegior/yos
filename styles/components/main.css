@@ -152,6 +152,22 @@
     border-bottom: 1px solid black;
 }
 
+#email::-webkit-input-placeholder{
+    padding-left: 40px;
+}
+
+#email::-moz-placeholder{
+    padding-left: 40px;
+}
+
+#email:-ms-input-placeholder{
+    padding-left: 40px;
+}
+
+#email::-ms-input-placeholder{
+    padding-left: 40px;
+}
+
 #email::placeholder{
     padding-left: 40px;
 }
@@ -237,6 +253,22 @@ input{
         width: 100%;
         padding: 0;
         margin-bottom: var(--mp-top);
+    }
+    #email::-webkit-input-placeholder{
+        padding-left: 0;
+        text-align: center;
+    }
+    #email::-moz-placeholder{
+        padding-left: 0;
+        text-align: center;
+    }
+    #email:-ms-input-placeholder{
+        padding-left: 0;
+        text-align: center;
+    }
+    #email::-ms-input-placeholder{
+        padding-left: 0;
+        text-align: center;
     }
     #email::placeholder{
         padding-left: 0;

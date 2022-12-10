@@ -102,9 +102,23 @@ input[type='checkbox']{
     margin-right: 0;
 }
 
+/* input[type="range"]{
+    background-color: antiquewhite;
+
+}
+
+input[type="range"]::-webkit-slider-thumb{
+    background-color: #fff;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+    background-color: black;
+} */
+
 .price-range{
-    color: black;
+    /* color: black; */
     width: 50%;
+    /* background-color: black; */
 }
 
 .colors-list li{
