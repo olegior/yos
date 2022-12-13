@@ -9,9 +9,7 @@
 
 
 .line{
-    height: 100px;
     font-family: 'Monoton';
-    white-space:nowrap;
     overflow: hidden;
     width: 100%;
     color: #0001FC;
@@ -19,20 +17,37 @@
     margin: 50px 0;
 }
 
-.line span{
-    display:inline-block;
-    padding-left:100%;
-    -webkit-animation: marquee 10s infinite linear;
-    animation: marquee 10s infinite linear;
+.line div{
+    display:flex;
+    margin: 0;
+    padding: 0;
+    width: 180%;
+    -webkit-animation: marquee-infinite 10s linear infinite;
+    animation: marquee-infinite 10s linear infinite;
     }
+
+.line p{
+    white-space: nowrap;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
      
-@-webkit-keyframes marquee {
-    0%{-webkit-transform: translate(0, 0);}
-    100%{-webkit-transform: translate(-100%, 0);}
+@-webkit-keyframes marquee-infinite {
+    0%{-webkit-transform: translate(0%);}
+    100%{-webkit-transform: translate(-50%);}
 }
-@keyframes marquee{
-    0%{transform: translate(0, 0);}
-    100%{transform: translate(-100%, 0)}
+@keyframes marquee-infinite{
+    0%{transform: translate(0%);}
+    100%{transform: translate(-50%)}
 }
 
 
+@media screen and (orientation:portrait) {
+    .line div{
+        display:flex;
+        width: 200%;
+        -webkit-animation: marquee-infinite 2s linear infinite;
+        animation: marquee-infinite 2s linear infinite;
+        }
+}
